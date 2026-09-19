@@ -14,15 +14,17 @@ syn_generic
 syn_map
 syn_opt
 
-#reports
+# Keep generated reports and output netlists in predictable directories.
+file mkdir reports
+file mkdir outputs
+
+# Reports
 report_timing > reports/report_timing.rpt
 report_power  > reports/report_power.rpt
 report_area   > reports/report_area.rpt
 report_qor    > reports/report_qor.rpt
 
-
-
-#Outputs
+# Outputs
 write_hdl > outputs/counter_netlist.v
 write_sdc > outputs/counter_sdc.sdc
-write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge  -setuphold split > outputs/delays.sdf
+write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > outputs/delays.sdf
