@@ -74,7 +74,7 @@ tool-generated files do not get mixed up.
 - We shall now write a design spec for 8bit up-counter with two outputs which go through the following sequence:
 ![Figure 1: 8bit-counter-block-diagram](https://user-images.githubusercontent.com/58098260/211213632-3d9db520-15c2-420e-b431-50486b6da349.png)
 - The counter should have the following inputs:
-  - rst, which is synchronous, active low
+  - rst, which is asynchronous, active low
   - clk
 - The counter should have the following output:
   - count (7:0) 
